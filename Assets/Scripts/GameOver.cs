@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,5 +24,7 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
+        FindObjectOfType<GameSession>().Resetgame();
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
     }
 }

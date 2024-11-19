@@ -55,6 +55,10 @@ public class GameSession : MonoBehaviour
                 timeSinceHit = 0;
             }
         }
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            Destroy(gameObject);
+        }
     }
     public void ProcessPlayerDeath()
     {

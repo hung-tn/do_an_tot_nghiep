@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +19,8 @@ public class PlayerMove : MonoBehaviour
     BoxCollider2D myFeetCollider;
     float gravityScaleAtStart;
     public GameSession gameSession;
-    bool isAlive = true;
+    public GameOver gameOver;
+    public bool isAlive = true;
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -27,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidbody.gravityScale;
-        gameSession = FindAnyObjectByType<GameSession>();
+     
     }
 
     
@@ -116,6 +117,8 @@ public class PlayerMove : MonoBehaviour
     {
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazads")))
         {
+            gameOver = GetComponent<GameOver>();
+            gameOver = FindObjectOfType<GameOver>();
             gameSession = FindAnyObjectByType<GameSession>();
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
             if (gameSession.Health <= 0 )
@@ -123,6 +126,7 @@ public class PlayerMove : MonoBehaviour
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
                 myRigidbody.velocity = deathKick;
+                gameOver.Gameover();
             }
         }
     }
