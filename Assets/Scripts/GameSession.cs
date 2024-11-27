@@ -9,16 +9,23 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] int score = 0;
-    [SerializeField] TextMeshProUGUI scoreText;
+    public int score = 0;
+    public TextMeshProUGUI scoreText;
     public float Health = 100;
+    public float Mana = 100;
     public float currentHealth;
-    [SerializeField] float maxHealth = 100;
-    [SerializeField] TMP_Text healthBarText;
-    [SerializeField] Slider healthBarSlider;
+    public float currentMana;
+    private float manaCost = 10;
+    private float maxHealth = 100;
+    private float maxMana = 100;
+    public TMP_Text healthBarText;
+    public Slider healthBarSlider;
+    public TMP_Text manaBarText;
+    public Slider manaBarSlider;
     private bool isInvincible = false;
     private float timeSinceHit = 0;
     private float timeinvincibaleTime = 1.0f;
+    public EnemyStats enemyStats;
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -36,9 +43,13 @@ public class GameSession : MonoBehaviour
     {
         scoreText.text = score.ToString();
         currentHealth = maxHealth;
+        currentMana = maxMana;
         healthBarSlider.maxValue = maxHealth;
+        manaBarSlider.maxValue = maxMana;
         healthBarSlider.value = currentHealth;
+        manaBarSlider.value = currentMana;
         healthBarText.text = "HP " + Health + " / " + maxHealth;
+        manaBarText.text = "MP " + Mana + " / " + maxMana;
     }
     private float CalculatesSlider(int currentHealth, int maxHealth)
     {
@@ -103,4 +114,15 @@ public class GameSession : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void ConsumeMana()
+    {
+        currentMana -= manaCost;
+        manaBarText.text = "MP " + currentMana + " / " + maxMana;
+        manaBarSlider.value = currentMana;
+    }
+
+    public bool CantShoot()
+    {
+        return currentMana >= manaCost;
+    }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1159031468745615102}
   - component: {fileID: 942330824979543609}
   - component: {fileID: 4522089970460492526}
+  - component: {fileID: 2845594250389341399}
   m_Layer: 12
   m_Name: Slime enemy 1
   m_TagString: Enemy
@@ -229,4 +230,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a280efb7b80fd4b9e189e769a20b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  enemyStats: {fileID: 2845594250389341399}
+  bullet: {fileID: 0}
+--- !u!114 &2845594250389341399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145118379649353329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8614dde0adbd648a66feba79d09e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: 
+  maxHealth: 30
+  overrideHealth: 0
+  customHealth: 0
+  damage: 10

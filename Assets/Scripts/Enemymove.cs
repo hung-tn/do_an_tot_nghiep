@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemymove : MonoBehaviour
 {
-
-    [SerializeField] float moveSpeed = 1f;
+    public EnemyStats enemyStats;
+    public Bullet bullet;
     Rigidbody2D myRigidbody;
+    private float moveSpeed = 1.0f;
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -17,8 +18,23 @@ public class Enemymove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        moveSpeed = -moveSpeed;
-        FlipEnemyFacing();
+        bullet = other.GetComponent<Bullet>();
+        if (other.tag == "Bullets")
+        {
+            if (enemyStats.maxHealth > 0)
+            {
+                enemyStats.maxHealth -= bullet.bulletDame;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            moveSpeed = -moveSpeed;
+            FlipEnemyFacing();
+        }
     }
     void FlipEnemyFacing()
     {
