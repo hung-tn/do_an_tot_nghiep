@@ -15,9 +15,10 @@ public class Bullet : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerMove>();
         gameSessions = FindObjectOfType<GameSession>();
-        xSpeed = player.transform.localScale.x * bulletSpeed;
         if (gameSessions.CantShoot())
         {
+            xSpeed = player.transform.localScale.x * bulletSpeed;
+            Invoke("Fire", 0.2f);
             gameSessions.ConsumeMana();
         } 
         else
@@ -25,7 +26,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void Update()
+    void Fire()
     {
         myRigidbody.velocity = new Vector2(xSpeed, 0f);
     }

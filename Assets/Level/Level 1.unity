@@ -46255,15 +46255,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 38090378065253375, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: orthographic size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2983952916071351401, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7040977
+      value: 4.966675
       objectReference: {fileID: 0}
     - target: {fileID: 2983952916071351401, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.9303055
+      value: -7.922319
       objectReference: {fileID: 0}
     - target: {fileID: 3720060003350853791, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46443,6 +46443,10 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 756417283}
+    - target: {fileID: 5998373997755458107, guid: bd8396ff8d5a74047bcd0d8ed6eca704, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -493192600, guid: 37eec4ffde113b34d814aa518fa2dcbe, type: 3}
     - target: {fileID: 6511138271553609063, guid: bd8396ff8d5a74047bcd0d8ed6eca704, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.83

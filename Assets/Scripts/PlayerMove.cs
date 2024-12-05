@@ -87,6 +87,7 @@ public class PlayerMove : MonoBehaviour
         {
             return;
         }
+        myAnimator.SetTrigger("Trigger");
         Instantiate(bullet, gun.position, transform.rotation);
     }
     void OnMove(InputValue value)
@@ -126,7 +127,7 @@ public class PlayerMove : MonoBehaviour
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
                 myRigidbody.velocity = deathKick;
-                gameOver.Gameover();
+                gameOver.OnPlayerDeath();
             }
         }
     }

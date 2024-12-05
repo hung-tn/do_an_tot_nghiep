@@ -222,6 +222,9 @@ MonoBehaviour:
   deathKick: {x: 10, y: 10}
   bullet: {fileID: 2907114641041199220, guid: beb877312a1b529438fefa99d3e2007b, type: 3}
   gun: {fileID: 633020200837819160}
+  gameSession: {fileID: 0}
+  gameOver: {fileID: 0}
+  isAlive: 1
 --- !u!61 &6027023454754169156
 BoxCollider2D:
   m_ObjectHideFlags: 0
