@@ -21,6 +21,18 @@ public class PlayerMove : MonoBehaviour
     public GameSession gameSession;
     public GameOver gameOver;
     public bool isAlive = true;
+    public static PlayerMove instance;
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -31,7 +43,6 @@ public class PlayerMove : MonoBehaviour
      
     }
 
-    
     void Update()
     {
         if (!isAlive)

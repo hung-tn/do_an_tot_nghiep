@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet1 : MonoBehaviour
 {
     Rigidbody2D myRigidbody;
     [SerializeField] float bulletSpeed = 15f;
@@ -36,9 +36,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        Destroy(gameObject);
-    }
+    
 }

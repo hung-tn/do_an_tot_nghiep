@@ -22,7 +22,7 @@ public class GameSession : MonoBehaviour
     public Slider healthBarSlider;
     public TMP_Text manaBarText;
     public Slider manaBarSlider;
-    private bool isInvincible = false;
+    public bool isInvincible = false;
     private float timeSinceHit = 0;
     private float timeinvincibaleTime = 1.0f;
     public EnemyStats enemyStats;
@@ -77,10 +77,10 @@ public class GameSession : MonoBehaviour
         {
             TakeLife();
         }
-        else if (Health <= 0)
-        {
-            ResetGameSession();
-        }
+        //else if (Health <= 0)
+        //{
+        //    ResetGameSession();
+        //}
     }
     public void AddToScore(int pointsToAdd)
     {

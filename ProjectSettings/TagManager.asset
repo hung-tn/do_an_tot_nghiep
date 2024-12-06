@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Bullets
+  - Wall
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -21,10 +23,10 @@ TagManager:
   - Bouncing
   - Enemies
   - Hazads
-  - Bullets
+  - Arrow
   - Interactables
-  - 
-  - 
+  - Boss
+  - Bullets
   - 
   - 
   - 

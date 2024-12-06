@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemymove : MonoBehaviour
 {
     public EnemyStats enemyStats;
-    public Bullet bullet;
+    public Bullet1 bullet;
     Rigidbody2D myRigidbody;
     private float moveSpeed = 1.0f;
     void Start()
@@ -18,8 +18,8 @@ public class Enemymove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        bullet = other.GetComponent<Bullet>();
-        if (other.tag == "Bullets")
+        bullet = other.GetComponent<Bullet1>();
+        if (other.tag == "Arrow")
         {
             if (enemyStats.maxHealth > 0)
             {
