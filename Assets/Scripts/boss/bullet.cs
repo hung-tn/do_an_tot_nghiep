@@ -3,30 +3,52 @@
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;  
-    public float damage = 20f; 
+    public float damage = 20f;
+    private Vector2 moveDirection;
+    private float moveSpeed;
     private Rigidbody2D rb;
     private Vector2 direction;
 
+
+    private void OnEnable()
+    {
+        Invoke("Destroy", 3f);
+    }
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
-        // Tính toán hướng của đạn
-        direction = (PlayerMove.instance.transform.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        moveSpeed = 5f;
     }
 
+    private void Update()
+    {
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+    }
+
+    public void SetMoveDirection(Vector2 dir)
+    {
+        moveDirection = dir;
+    }
+
+    private void Destroy()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
-        if (other.tag == "Wall")      
+        if (other.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
+
 }

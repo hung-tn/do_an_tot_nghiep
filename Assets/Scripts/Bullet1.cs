@@ -37,7 +37,7 @@ public class Bullet1 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.tag == "Wall")
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             Destroy(gameObject);
         }

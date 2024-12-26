@@ -4,54 +4,41 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    public GameObject bulletPrefab;    // Prefab của đạn mà boss sẽ bắn
-    public Transform firePoint;        // Vị trí bắn của boss
-    public float fireRate = 2f;        // Tốc độ bắn, thời gian giữa mỗi lần bắn
-    private float nextFireTime = 0f;   // Thời gian bắn tiếp theo
-    public Transform player;           // Vị trí người chơi
-    private bool playerInRange = false;
-
-    // Start is called before the first frame update
+    public int maxHealth = 100;  
+    private int currentHealth;
+    Rigidbody2D myRigidbody;
+    public GameObject exit;
     void Start()
     {
-        // Lấy vị trí của người chơi nếu cần thiết
-        player = FindObjectOfType<PlayerMove>().transform;
+        myRigidbody = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void TakeDamage()
     {
-        float distance = Vector2.Distance(transform.position, player.position);
-        if (playerInRange && Time.time >= nextFireTime) 
+        if (currentHealth < 0)
+            currentHealth = 0;
+
+        if (currentHealth <= 0)
         {
-            Attack();   // Gọi hàm tấn công
+            Die();
         }
     }
 
-    void Attack()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Cập nhật thời gian tiếp theo khi bắn
-        nextFireTime = Time.time + 1f / fireRate;
-
-        // Tạo đạn
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-        // Gọi animation bắn của boss (nếu có)
-        // Animator.SetTrigger("Attack");
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-       if (other.tag == "Player")
+        if (collision.CompareTag("Arrow"))
         {
-            playerInRange = true;
+            currentHealth -= 20;
+            TakeDamage();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void Die()
     {
-        if (other.tag == "Player")
-        {
-            playerInRange= false;
-        }
+        exit.SetActive(true);
+        Destroy(gameObject);  
     }
 }
+
