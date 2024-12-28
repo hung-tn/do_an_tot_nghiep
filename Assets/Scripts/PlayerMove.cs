@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Progress;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -140,6 +141,32 @@ public class PlayerMove : MonoBehaviour
                 myRigidbody.velocity = deathKick;
                 gameOver.OnPlayerDeath();
             }
+        }
+    }
+
+    void OnHp(InputValue value)
+    {
+        if (gameSession.hpItem > 0 && gameSession.currentHealth < gameSession.maxHealth)
+        {
+            gameSession.hpItem--;
+            gameSession.currentHealth += 20;
+            if (gameSession.currentHealth > gameSession.maxHealth) gameSession.currentHealth = gameSession.maxHealth;
+            gameSession.hpText.text = "HP: " + gameSession.hpItem;
+            gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth; ;
+            gameSession.healthBarSlider.value = gameSession.currentHealth;
+        }
+    }
+
+    void OnMp(InputValue value)
+    {
+        if (gameSession.mpItem > 0 && gameSession.currentMana < gameSession.maxMana)
+        {
+            gameSession.mpItem--;
+            gameSession.currentMana += 20;
+            if (gameSession.currentMana > gameSession.maxMana) gameSession.currentMana = gameSession.maxMana;
+            gameSession.mpText.text = "MP: " + gameSession.mpItem;
+            gameSession.manaBarText.text = "MP " + gameSession.currentMana + " / " + gameSession.maxMana;
+            gameSession.manaBarSlider.value = gameSession.currentMana;
         }
     }
 }

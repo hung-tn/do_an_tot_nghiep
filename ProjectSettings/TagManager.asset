@@ -8,6 +8,8 @@ TagManager:
   - Bullets
   - Wall
   - Arrow
+  - Hp
+  - Mp
   layers:
   - Default
   - TransparentFX
@@ -71,4 +73,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3482370979
+    locked: 0
+  - name: Item
+    uniqueID: 3977129063
     locked: 0

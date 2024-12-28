@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -16,8 +17,8 @@ public class GameSession : MonoBehaviour
     public float currentHealth;
     public float currentMana;
     private float manaCost = 10;
-    private float maxHealth = 100;
-    private float maxMana = 100;
+    public float maxHealth = 100;
+    public float maxMana = 100;
     public TMP_Text healthBarText;
     public Slider healthBarSlider;
     public TMP_Text manaBarText;
@@ -26,6 +27,10 @@ public class GameSession : MonoBehaviour
     private float timeSinceHit = 0;
     private float timeinvincibaleTime = 1.0f;
     public EnemyStats enemyStats;
+    public int hpItem = 0;
+    public int mpItem = 0;
+    public TMP_Text hpText;
+    public TMP_Text mpText;
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -50,6 +55,8 @@ public class GameSession : MonoBehaviour
         manaBarSlider.value = currentMana;
         healthBarText.text = "HP " + Health + " / " + maxHealth;
         manaBarText.text = "MP " + Mana + " / " + maxMana;
+        hpText.text = "HP: " + hpItem;
+        mpText.text = "MP: " + mpItem;
     }
     private float CalculatesSlider(int currentHealth, int maxHealth)
     {
@@ -77,17 +84,25 @@ public class GameSession : MonoBehaviour
         {
             TakeLife();
         }
-        //else if (Health <= 0)
-        //{
-        //    ResetGameSession();
-        //}
     }
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
         scoreText.text = score.ToString();
     }
-     void TakeLife()
+
+    public void AddItemHp()
+    {
+        hpItem++;
+        hpText.text = "HP: " + hpItem;
+    }
+
+    public void AddItemMp()
+    {
+        mpItem++;
+        mpText.text = "MP: " + mpItem;
+    }
+    void TakeLife()
     {
         Health -= 10;
         currentHealth -= 10;
@@ -125,4 +140,6 @@ public class GameSession : MonoBehaviour
     {
         return currentMana >= manaCost;
     }
+
+
 }
