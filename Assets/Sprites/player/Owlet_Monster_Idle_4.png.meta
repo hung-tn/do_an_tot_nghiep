@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2581cc46172e95c46a13830db0d32b4b
+guid: 8a2716f8b196dc24c80ed788d4d2a364
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,33 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: Owlet_Monster_Idle_4_0
       rect:
         serializedVersion: 2
         x: 3
         y: 0
         width: 21
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18bd7ab62ed4e894ab37e1dacfc277bf
-      internalID: -1456190151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_1
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 0
-        width: 24
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d829fe6ae75c9d04ba1d87b36933674d
-      internalID: 429558614
+      spriteID: b7a34d274b13ea448a7e4fef21a662ac
+      internalID: 1534676457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
+      name: Owlet_Monster_Idle_4_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 36
         y: 0
-        width: 25
+        width: 20
         height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7300e22227609a45ac3cde436f4e6bb
-      internalID: -436578946
+      spriteID: 1e44acf61e92a9745a285f3520d1ac66
+      internalID: -1308617625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_3
+      name: Owlet_Monster_Idle_4_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 67
         y: 0
-        width: 27
-        height: 25
+        width: 21
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c696593feed0e48ae9d3a2c4a27135
-      internalID: 1332818954
+      spriteID: b0517c11d30702849b902dff54aa4d8e
+      internalID: -983785646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_4
+      name: Owlet_Monster_Idle_4_3
       rect:
         serializedVersion: 2
-        x: 171
+        x: 99
         y: 0
-        width: 26
+        width: 22
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,29 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47a7ea6f8f31b0c4bae54eb2e17fe19c
-      internalID: -628897659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_5
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 0
-        width: 23
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68cfc48c7b40e49408bfae1d9233fca6
-      internalID: 1509284168
+      spriteID: 63d02ee31507fe64598ee739e85cd89a
+      internalID: 978699312
       vertices: []
       indices: 
       edges: []
@@ -233,12 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_0: -1456190151
-      Walk_1: 429558614
-      Walk_2: -436578946
-      Walk_3: 1332818954
-      Walk_4: -628897659
-      Walk_5: 1509284168
+      Owlet_Monster_Idle_4_0: 1534676457
+      Owlet_Monster_Idle_4_1: -1308617625
+      Owlet_Monster_Idle_4_2: -983785646
+      Owlet_Monster_Idle_4_3: 978699312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

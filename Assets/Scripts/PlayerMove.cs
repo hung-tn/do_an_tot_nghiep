@@ -46,6 +46,10 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            myAnimator.SetBool("isJump", false);
+        }
         if (!isAlive)
         {
             return;
@@ -123,6 +127,7 @@ public class PlayerMove : MonoBehaviour
         if (value.isPressed)
         {
             myRigidbody.velocity += new Vector2(0f, jumpSpeed);
+            myAnimator.SetBool("isJump", true);
         }
     }
 
@@ -134,7 +139,11 @@ public class PlayerMove : MonoBehaviour
             gameOver = FindObjectOfType<GameOver>();
             gameSession = FindAnyObjectByType<GameSession>();
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
-            if (gameSession.Health <= 0 )
+            if (gameSession.Health > 0)
+            {
+                myAnimator.SetTrigger("Hurt");
+            }
+            else if (gameSession.Health <= 0)
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");

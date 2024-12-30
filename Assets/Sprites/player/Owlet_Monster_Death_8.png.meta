@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb7ace4441d73ad4a9337a100e751550
+guid: fd76686e4e7916246b86c2988584511d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,232 +97,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: Owlet_Monster_Death_8_0
       rect:
         serializedVersion: 2
         x: 2
         y: 0
-        width: 28
+        width: 22
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 919569809ab138240997a24fdf911f6f
-      internalID: -1773331967
+      spriteID: 95bdb9f39ab298344912a5dd186cae39
+      internalID: -1406584439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_1
+      name: Owlet_Monster_Death_8_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 32
         y: 2
-        width: 26
+        width: 25
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8bfe69382449db47997c9147e7900e7
-      internalID: 1291748438
+      spriteID: 38182bd57014d9c42a781bf63c710e61
+      internalID: -249374759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_2
+      name: Owlet_Monster_Death_8_2
       rect:
         serializedVersion: 2
-        x: 86
+        x: 66
         y: 1
         width: 26
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 504dc2060dac8c44f8e64e93034fd913
-      internalID: -922743142
+      spriteID: e14489ac51999794d8b386c464f9aa57
+      internalID: 314334580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_3
+      name: Owlet_Monster_Death_8_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 29
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446e447aecede634798f3db6c3e89c4d
+      internalID: -165764579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Owlet_Monster_Death_8_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 29
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 35
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0530b7d37685ee54f9e737cab1f22189
-      internalID: -1519764705
+      spriteID: bb156db251247ba418d093898dc4c99b
+      internalID: -1337043873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_4
+      name: Owlet_Monster_Death_8_5
       rect:
         serializedVersion: 2
-        x: 168
+        x: 169
         y: 0
-        width: 32
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f35a6583a3f9bce4b92c19595e2a3c12
-      internalID: 1784895219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_5
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 32
+        width: 25
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb7475b71f2d8d48b60fd2d08992523
-      internalID: -1986465467
+      spriteID: 653a378abe9dcde4a886fd89a3b69f43
+      internalID: 2001814341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_6
+      name: Owlet_Monster_Death_8_6
       rect:
         serializedVersion: 2
-        x: 101
-        y: 25
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2958e0e9f21b3e341850e900a607d518
-      internalID: -1507580182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_7
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 29
-        width: 16
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7bd158671786b34386dd708bc53798f
-      internalID: 82313786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_8
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 28
-        width: 15
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdb40292f4e2afd459dd019c33ea5518
-      internalID: -1374418983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_9
-      rect:
-        serializedVersion: 2
-        x: 249
+        x: 201
         y: 0
-        width: 78
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 54
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bfaf07fb5d19c14ebf67710fc03e261
-      internalID: -127706955
+      spriteID: 3c70e71c3aa4b514fa89372991f77a49
+      internalID: 1159904262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_10
+      name: Owlet_Monster_Death_8_7
       rect:
         serializedVersion: 2
-        x: 140
-        y: 18
-        width: 79
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 154
+        y: 21
+        width: 7
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6e5b9ffa2ca05547a326c430687d9f1
-      internalID: 1147160389
+      spriteID: 7e857aa5c1aea334cae8c2d62228835a
+      internalID: -2105188023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Owlet_Monster_Death_8_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 24
+        width: 14
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95becd4c6de298c4f86658f2cab01801
+      internalID: -971052300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Owlet_Monster_Death_8_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 20
+        width: 8
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5e2b3dfde13694e868af76116e6af2
+      internalID: 2068809061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Owlet_Monster_Death_8_10
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 22
+        width: 11
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a80e194d588f4547bc72539d7f0b608
+      internalID: 578434524
       vertices: []
       indices: 
       edges: []
@@ -338,17 +338,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Death_0: -1773331967
-      Death_1: 1291748438
-      Death_10: 1147160389
-      Death_2: -922743142
-      Death_3: -1519764705
-      Death_4: 1784895219
-      Death_5: -1986465467
-      Death_6: -1507580182
-      Death_7: 82313786
-      Death_8: -1374418983
-      Death_9: -127706955
+      Owlet_Monster_Death_8_0: -1406584439
+      Owlet_Monster_Death_8_1: -249374759
+      Owlet_Monster_Death_8_10: 578434524
+      Owlet_Monster_Death_8_2: 314334580
+      Owlet_Monster_Death_8_3: -165764579
+      Owlet_Monster_Death_8_4: -1337043873
+      Owlet_Monster_Death_8_5: 2001814341
+      Owlet_Monster_Death_8_6: 1159904262
+      Owlet_Monster_Death_8_7: -2105188023
+      Owlet_Monster_Death_8_8: -971052300
+      Owlet_Monster_Death_8_9: 2068809061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
