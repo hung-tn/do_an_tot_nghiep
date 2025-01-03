@@ -10,6 +10,7 @@ TagManager:
   - Arrow
   - Hp
   - Mp
+  - Arrow0
   layers:
   - Default
   - TransparentFX

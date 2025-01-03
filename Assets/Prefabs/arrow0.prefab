@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2907114641041199220
+--- !u!1 &6271957268024542695
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2396159640532938506}
-  - component: {fileID: 1048314484983261037}
-  - component: {fileID: -3033152023331032910}
-  - component: {fileID: -1511939355931671751}
-  - component: {fileID: 547552528482512443}
+  - component: {fileID: 5715948531170794037}
+  - component: {fileID: 2227086945310370433}
+  - component: {fileID: 2675199867029837561}
+  - component: {fileID: 3338641851900181562}
+  - component: {fileID: 1611366833313743823}
   m_Layer: 14
-  m_Name: arrow
-  m_TagString: Arrow
+  m_Name: arrow0
+  m_TagString: Arrow0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2396159640532938506
+--- !u!4 &5715948531170794037
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2907114641041199220}
+  m_GameObject: {fileID: 6271957268024542695}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -19.152954, y: -0.58496004, z: 0.40753102}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1048314484983261037
+--- !u!212 &2227086945310370433
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2907114641041199220}
+  m_GameObject: {fileID: 6271957268024542695}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: -812596317
   m_SortingLayer: 9
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b765edf6b50c0f145a13ab46d220ea17, type: 3}
-  m_Color: {r: 0.9622642, g: 0.9304913, b: 0.9304913, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a05aecba9d7131e49b25f75b0cc24578, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,14 +87,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-3033152023331032910
+--- !u!50 &2675199867029837561
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2907114641041199220}
+  m_GameObject: {fileID: 6271957268024542695}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -114,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &-1511939355931671751
+--- !u!70 &3338641851900181562
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2907114641041199220}
+  m_GameObject: {fileID: 6271957268024542695}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -146,20 +146,21 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002236411, y: 0}
-  m_Size: {x: 0.48174897, y: 0.875}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.481749, y: 0.875}
   m_Direction: 0
---- !u!114 &547552528482512443
+--- !u!114 &1611366833313743823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2907114641041199220}
+  m_GameObject: {fileID: 6271957268024542695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf61957f5de75f438a0c4287bea3f54, type: 3}
+  m_Script: {fileID: 11500000, guid: da6246b9dd1e8ab4ea47a5f1eb323ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 15
   bulletDame: 20
+  cooldown: 2

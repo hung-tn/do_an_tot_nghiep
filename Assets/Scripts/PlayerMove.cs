@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEditor.Progress;
@@ -12,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
     [SerializeField] GameObject bullet;
+    [SerializeField] GameObject bullet0;
     [SerializeField] Transform gun;
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -23,6 +25,9 @@ public class PlayerMove : MonoBehaviour
     public GameOver gameOver;
     public bool isAlive = true;
     public static PlayerMove instance;
+    public float cooldown0 = 1f;
+    public float cooldown1 = 2f;
+    float lastShot;
     void Awake()
     {
         if (instance == null)
@@ -103,10 +108,30 @@ public class PlayerMove : MonoBehaviour
         {
             return;
         }
+        if (Time.time - lastShot < cooldown1)
+        {
+            return;
+        }
+        lastShot = Time.time;
         myAnimator.SetTrigger("Trigger");
         Instantiate(bullet, gun.position, transform.rotation);
     }
-    void OnMove(InputValue value)
+
+    void OnFire0(InputValue value)
+    {
+        if (!isAlive)
+        {
+            return;
+        }
+        if (Time.time - lastShot < cooldown0)
+        {
+            return;
+        }
+        lastShot = Time.time;
+        myAnimator.SetTrigger("Trigger");
+        Instantiate(bullet0, gun.position, transform.rotation);
+    }
+        void OnMove(InputValue value)
     {
         if (!isAlive)
         {
@@ -114,6 +139,7 @@ public class PlayerMove : MonoBehaviour
         }
         moveInput = value.Get<Vector2>();
     }
+
     void OnJump(InputValue value)
     {
         if (!isAlive)
