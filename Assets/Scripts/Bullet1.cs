@@ -6,7 +6,7 @@ public class Bullet1 : MonoBehaviour
 {
     Rigidbody2D myRigidbody;
     [SerializeField] float bulletSpeed = 15f;
-    public float bulletDame = 20;
+    public float bulletDame = 50;
     PlayerMove player;
     GameSession gameSessions;
     float xSpeed;

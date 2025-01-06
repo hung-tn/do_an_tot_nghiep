@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8852681939859478907}
   - component: {fileID: 4153091922668771474}
   - component: {fileID: 2311562795515022245}
-  - component: {fileID: 3087417786978506783}
   - component: {fileID: 1159031468745615102}
   - component: {fileID: 942330824979543609}
   - component: {fileID: 4522089970460492526}
@@ -117,41 +116,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &3087417786978506783
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7145118379649353329}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.044553757, y: -0.044554472}
-  m_Size: {x: 0.8039589, y: 0.8039603}
-  m_Direction: 0
 --- !u!95 &1159031468745615102
 Animator:
   serializedVersion: 5
@@ -232,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 2845594250389341399}
   bullet: {fileID: 0}
+  speed: 2
+  distance: 5
 --- !u!114 &2845594250389341399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8614dde0adbd648a66feba79d09e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: 
   maxHealth: 30
   overrideHealth: 0
   customHealth: 0
