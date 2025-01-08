@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    public int maxHealth = 100;  
-    private int currentHealth;
+    public int maxHealth = 100;
+    public Bullet1 bullet;
+    public bullet0 bullet0;
+    private float currentHealth;
     Rigidbody2D myRigidbody;
     public GameObject exit;
     void Start()
@@ -26,11 +28,19 @@ public class BossAttack : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Arrow"))
+        bullet = other.GetComponent<Bullet1>();
+        bullet0 = other.GetComponent<bullet0>();
+        if (other.CompareTag("Arrow0"))
         {
-            currentHealth -= 20;
+            currentHealth -= bullet0.bulletDame;
+            TakeDamage();
+        }
+
+        if (other.CompareTag("Arrow"))
+        {
+            currentHealth -= bullet.bulletDame;
             TakeDamage();
         }
     }

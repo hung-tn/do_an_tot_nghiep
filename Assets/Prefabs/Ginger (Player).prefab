@@ -226,6 +226,8 @@ MonoBehaviour:
   gameSession: {fileID: 0}
   gameOver: {fileID: 7786464855630495269, guid: 31b728cbe16e04346928b65cc3e0c490, type: 3}
   isAlive: 1
+  cooldown0: 1
+  cooldown1: 2
 --- !u!61 &6985436117764879464
 BoxCollider2D:
   m_ObjectHideFlags: 0

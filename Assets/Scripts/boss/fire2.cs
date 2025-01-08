@@ -2,30 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fire1 : MonoBehaviour
+public class fire2 : MonoBehaviour
 {
-    [SerializeField]
-    private int bulletSAmount = 10;
-    [SerializeField]
-    private float startAngle = 90f, endAngle = 270f;
-    [SerializeField]
-    private float fireRate = 2f;
-
+    private float angle = 0f;
     private Vector2 bulletMoveDirection;
-
-    private void Start()
+    [SerializeField] private float fireRate = 0.2f;
+    [SerializeField] private float numBullets = 2;
+    void Start()
     {
         InvokeRepeating("Fire", 0f, fireRate);
     }
+
     private void Fire()
     {
-        float angleStep = (endAngle - startAngle) / bulletSAmount;
-        float angle = startAngle;
-
-        for (int i = 0; i < bulletSAmount + 1; i++)
+        for (int i = 1; i <= numBullets; i++)
         {
-            float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
-            float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
+            float angleStep = 360f / numBullets;
+            float bulDirX = transform.position.x + Mathf.Sin(((angle + angleStep * i) * Mathf.PI) / 180f);
+            float bulDirY = transform.position.y + Mathf.Cos(((angle + angleStep * i) * Mathf.PI) / 180f);
 
             Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
             Vector2 bulDir = (bulMoveVector - transform.position).normalized;
@@ -35,7 +29,12 @@ public class fire1 : MonoBehaviour
             bul.transform.rotation = transform.rotation;
             bul.SetActive(true);
             bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
-            angle += angleStep;
+        }
+
+        angle += 10f;
+        if (angle >= 360f)
+        {
+            angle = 0f;
         }
     }
 }
