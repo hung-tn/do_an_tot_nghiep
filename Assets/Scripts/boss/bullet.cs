@@ -9,11 +9,6 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction;
 
-
-    private void OnEnable()
-    {
-        Invoke("Destroy", 3f);
-    }
     void Start()
     {
         moveSpeed = 5f;
@@ -34,10 +29,6 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void OnDisable()
-    {
-        CancelInvoke();
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

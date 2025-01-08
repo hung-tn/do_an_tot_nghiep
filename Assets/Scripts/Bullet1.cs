@@ -10,6 +10,7 @@ public class Bullet1 : MonoBehaviour
     PlayerMove player;
     GameSession gameSessions;
     float xSpeed;
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
