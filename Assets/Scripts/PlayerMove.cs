@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Progress;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -179,12 +178,34 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        gameSession = FindAnyObjectByType<GameSession>();
+        if (other.tag == "Bullets")
+        {
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
+            if (gameSession.Health > 0)
+            {
+                myAnimator.SetTrigger("Hurt");
+            }
+            if (gameSession.Health <= 0)
+            {
+                isAlive = false;
+                myAnimator.SetTrigger("Death");
+                myRigidbody.velocity = deathKick;
+                gameOver.OnPlayerDeath();
+            }
+        }
+
+    }
+
     void OnHp(InputValue value)
     {
         if (gameSession.hpItem > 0 && gameSession.currentHealth < gameSession.maxHealth)
         {
             gameSession.hpItem--;
-            gameSession.currentHealth += 20;
+            gameSession.Health += 50;
+            gameSession.currentHealth += 50;
             if (gameSession.currentHealth > gameSession.maxHealth) gameSession.currentHealth = gameSession.maxHealth;
             gameSession.hpText.text = "HP: " + gameSession.hpItem;
             gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth; ;
@@ -196,8 +217,9 @@ public class PlayerMove : MonoBehaviour
     {
         if (gameSession.mpItem > 0 && gameSession.currentMana < gameSession.maxMana)
         {
+            gameSession.Mana += 50;
             gameSession.mpItem--;
-            gameSession.currentMana += 20;
+            gameSession.currentMana += 50;
             if (gameSession.currentMana > gameSession.maxMana) gameSession.currentMana = gameSession.maxMana;
             gameSession.mpText.text = "MP: " + gameSession.mpItem;
             gameSession.manaBarText.text = "MP " + gameSession.currentMana + " / " + gameSession.maxMana;

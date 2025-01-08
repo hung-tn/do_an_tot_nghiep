@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8183464586208992794}
   - component: {fileID: 8040941239220625209}
   m_Layer: 17
-  m_Name: bullet
+  m_Name: Bullet
   m_TagString: Bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,8 +146,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0033664703, y: 0.00087976456}
-  m_Size: {x: 0.47306824, y: 0.47306824}
+  m_Offset: {x: 0.00082826614, y: 0.000880003}
+  m_Size: {x: 0.40316296, y: 0.40316296}
   m_Direction: 0
 --- !u!114 &8040941239220625209
 MonoBehaviour:

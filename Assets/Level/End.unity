@@ -4161,21 +4161,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4811433510240740264, guid: 3cec4181dd560004eba3c594d054350e, type: 3}
-      propertyPath: cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811433510240740264, guid: 3cec4181dd560004eba3c594d054350e, type: 3}
       propertyPath: gameSession
       value: 
       objectReference: {fileID: 1010626692}
-    - target: {fileID: 4811433510240740264, guid: 3cec4181dd560004eba3c594d054350e, type: 3}
-      propertyPath: healingEffect
-      value: 
-      objectReference: {fileID: 5354518631870755210, guid: 74e616f11b240f34f85234439d56b5e6, type: 3}
-    - target: {fileID: 4811433510240740264, guid: 3cec4181dd560004eba3c594d054350e, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 2014147825}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4268,7 +4256,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.046177, y: -2.405595, z: -10}
+  m_LocalPosition: {x: -15.080778, y: -2.4057348, z: -10}
   m_LocalScale: {x: 1, y: 0.8875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

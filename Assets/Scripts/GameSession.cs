@@ -34,7 +34,7 @@ public class GameSession : MonoBehaviour
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
-        if (numGameSessions > 1 )
+        if (numGameSessions > 1)
         {
             Destroy(gameObject);
         }
@@ -67,7 +67,7 @@ public class GameSession : MonoBehaviour
         if (isInvincible)
         {
             timeSinceHit += Time.deltaTime;
-            if (timeSinceHit > timeinvincibaleTime) 
+            if (timeSinceHit > timeinvincibaleTime)
             {
                 isInvincible = false;
                 timeSinceHit = 0;
@@ -109,7 +109,7 @@ public class GameSession : MonoBehaviour
         if (currentHealth < 0) currentHealth = 0;
         isInvincible = true;
         timeSinceHit = 0;
-        healthBarText.text = "HP " + Health + " / " + maxHealth;;
+        healthBarText.text = "HP " + Health + " / " + maxHealth; ;
         healthBarSlider.value = currentHealth;
     }
 
@@ -131,6 +131,7 @@ public class GameSession : MonoBehaviour
 
     public void ConsumeMana()
     {
+        Mana -= manaCost;
         currentMana -= manaCost;
         manaBarText.text = "MP " + currentMana + " / " + maxMana;
         manaBarSlider.value = currentMana;
@@ -140,6 +141,5 @@ public class GameSession : MonoBehaviour
     {
         return currentMana >= manaCost;
     }
-
 
 }
