@@ -21,8 +21,6 @@ public class PauseGame : MonoBehaviour
     }
     public void Home()
     {
-        FindObjectOfType<GameSession>().Resetgame();
-        FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
     }

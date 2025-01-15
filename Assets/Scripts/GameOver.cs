@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     [SerializeField] GameObject gameOver;
-    public float delay = 2.0f;
+    public float delay = 1.0f;
 
     public void OnPlayerDeath()
     {
@@ -29,7 +29,5 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
-        FindObjectOfType<GameSession>().Resetgame();
-        FindObjectOfType<ScenePersist>().ResetScenePersist();
     }
 }
