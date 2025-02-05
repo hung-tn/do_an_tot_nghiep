@@ -10,7 +10,7 @@ public class fire2 : MonoBehaviour
     [SerializeField] private float numBullets = 2;
     void Start()
     {
-        InvokeRepeating("Fire", 0f, fireRate);
+        InvokeRepeating("Fire", 1f, fireRate);
     }
 
     private void Fire()
