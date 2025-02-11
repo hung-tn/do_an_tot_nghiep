@@ -15,7 +15,7 @@ public class fire1 : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Fire", 0f, fireRate);
+        InvokeRepeating("Fire", 1f, fireRate);
     }
     private void Fire()
     {

@@ -206,10 +206,13 @@ public class PlayerMove : MonoBehaviour
             gameSession.hpItem--;
             gameSession.Health += 50;
             gameSession.currentHealth += 50;
-            if (gameSession.currentHealth > gameSession.maxHealth) gameSession.currentHealth = gameSession.maxHealth;
-            gameSession.hpText.text = "HP: " + gameSession.hpItem;
-            gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth; ;
-            gameSession.healthBarSlider.value = gameSession.currentHealth;
+            if (gameSession.currentHealth > gameSession.maxHealth)
+            {
+                gameSession.currentHealth = gameSession.maxHealth;
+                gameSession.hpText.text = "HP: " + gameSession.hpItem;
+                gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth; ;
+                gameSession.healthBarSlider.value = gameSession.currentHealth;
+            }
         }
     }
 

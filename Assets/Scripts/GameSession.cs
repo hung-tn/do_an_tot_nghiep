@@ -109,7 +109,7 @@ public class GameSession : MonoBehaviour
         if (currentHealth < 0) currentHealth = 0;
         isInvincible = true;
         timeSinceHit = 0;
-        healthBarText.text = "HP " + Health + " / " + maxHealth; ;
+        healthBarText.text = "HP " + currentHealth + " / " + maxHealth; ;
         healthBarSlider.value = currentHealth;
     }
 
