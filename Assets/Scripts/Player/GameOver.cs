@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     [SerializeField] GameObject gameOver;
-    public float delay = 1.0f;
+    public float delay = 0f;
 
     public void OnPlayerDeath()
     {

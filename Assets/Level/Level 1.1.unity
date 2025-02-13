@@ -1994,23 +1994,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2175762151284822418, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2175762151284822418, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540712379337529313, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540712379337529313, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540712379337529313, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3519792561082227391, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_Pivot.x
@@ -2090,6 +2090,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3519792561082227391, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294703883968354700, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9054523415080183133, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
@@ -2464,7 +2468,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.458262, y: 6.933131, z: -10}
+  m_LocalPosition: {x: -11.458261, y: 6.9342327, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

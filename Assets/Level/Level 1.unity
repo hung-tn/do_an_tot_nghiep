@@ -32631,6 +32631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8093845814579707368, guid: bcea3eaf398779b4c973d557a2de84c5, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32718,6 +32722,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 186451825545344337, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 186451825545344337, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -32747,23 +32755,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2175762151284822418, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2175762151284822418, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540712379337529313, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540712379337529313, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540712379337529313, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3519792561082227391, guid: 4c83009e98d055144b17e6a011b0f1bf, type: 3}
       propertyPath: m_Pivot.x
@@ -33222,11 +33230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983952916071351401, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.994236
+      value: 6.277935
       objectReference: {fileID: 0}
     - target: {fileID: 2983952916071351401, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.1740775
+      value: -7.1831145
       objectReference: {fileID: 0}
     - target: {fileID: 3720060003350853791, guid: e88253a44a2435741adf1755c8907283, type: 3}
       propertyPath: m_LocalPosition.x

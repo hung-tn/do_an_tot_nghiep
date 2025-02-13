@@ -12,8 +12,8 @@ public class GameSession : MonoBehaviour
 {
     public int score = 0;
     public TextMeshProUGUI scoreText;
-    public float Health = 100;
-    public float Mana = 100;
+    //public float Health = 100;
+    //public float Mana = 100;
     public float currentHealth;
     public float currentMana;
     private float manaCost = 10;
@@ -53,8 +53,8 @@ public class GameSession : MonoBehaviour
         manaBarSlider.maxValue = maxMana;
         healthBarSlider.value = currentHealth;
         manaBarSlider.value = currentMana;
-        healthBarText.text = "HP " + Health + " / " + maxHealth;
-        manaBarText.text = "MP " + Mana + " / " + maxMana;
+        healthBarText.text = "HP " + currentHealth + " / " + maxHealth;
+        manaBarText.text = "MP " + currentMana + " / " + maxMana;
         hpText.text = "HP: " + hpItem;
         mpText.text = "MP: " + mpItem;
     }
@@ -80,7 +80,7 @@ public class GameSession : MonoBehaviour
     }
     public void ProcessPlayerDeath()
     {
-        if (Health > 0 && !isInvincible)
+        if (currentHealth > 0 && !isInvincible)
         {
             TakeLife();
         }
@@ -104,12 +104,11 @@ public class GameSession : MonoBehaviour
     }
     void TakeLife()
     {
-        Health -= 10;
         currentHealth -= 10;
         if (currentHealth < 0) currentHealth = 0;
         isInvincible = true;
         timeSinceHit = 0;
-        healthBarText.text = "HP " + currentHealth + " / " + maxHealth; ;
+        healthBarText.text = "HP " + currentHealth + " / " + maxHealth;
         healthBarSlider.value = currentHealth;
     }
 
@@ -121,7 +120,7 @@ public class GameSession : MonoBehaviour
     }
     public void Resetgame()
     {
-        Health = 100;
+        currentHealth = 100;
         timeSinceHit = 0;
         isInvincible = false;
         score = 0;
@@ -131,7 +130,7 @@ public class GameSession : MonoBehaviour
 
     public void ConsumeMana()
     {
-        Mana -= manaCost;
+        currentMana -= manaCost;
         currentMana -= manaCost;
         manaBarText.text = "MP " + currentMana + " / " + maxMana;
         manaBarSlider.value = currentMana;

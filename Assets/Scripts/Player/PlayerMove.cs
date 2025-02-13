@@ -101,7 +101,7 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    void OnFire (InputValue value)
+    void OnFire(InputValue value)
     {
         if (!isAlive)
         {
@@ -164,11 +164,11 @@ public class PlayerMove : MonoBehaviour
             gameOver = FindObjectOfType<GameOver>();
             gameSession = FindAnyObjectByType<GameSession>();
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
-            if (gameSession.Health > 0)
+            if (gameSession.currentHealth > 0)
             {
                 myAnimator.SetTrigger("Hurt");
             }
-            else if (gameSession.Health <= 0)
+            else if (gameSession.currentHealth <= 0)
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
@@ -184,11 +184,11 @@ public class PlayerMove : MonoBehaviour
         if (other.tag == "Bullets")
         {
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
-            if (gameSession.Health > 0)
+            if (gameSession.currentHealth > 0)
             {
                 myAnimator.SetTrigger("Hurt");
             }
-            if (gameSession.Health <= 0)
+            if (gameSession.currentHealth <= 0)
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
@@ -204,13 +204,13 @@ public class PlayerMove : MonoBehaviour
         if (gameSession.hpItem > 0 && gameSession.currentHealth < gameSession.maxHealth)
         {
             gameSession.hpItem--;
-            gameSession.Health += 50;
+            gameSession.currentHealth += 50;
             gameSession.currentHealth += 50;
             if (gameSession.currentHealth > gameSession.maxHealth)
             {
                 gameSession.currentHealth = gameSession.maxHealth;
                 gameSession.hpText.text = "HP: " + gameSession.hpItem;
-                gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth; ;
+                gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth;
                 gameSession.healthBarSlider.value = gameSession.currentHealth;
             }
         }
@@ -220,7 +220,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (gameSession.mpItem > 0 && gameSession.currentMana < gameSession.maxMana)
         {
-            gameSession.Mana += 50;
+            gameSession.currentMana += 50;
             gameSession.mpItem--;
             gameSession.currentMana += 50;
             if (gameSession.currentMana > gameSession.maxMana) gameSession.currentMana = gameSession.maxMana;
