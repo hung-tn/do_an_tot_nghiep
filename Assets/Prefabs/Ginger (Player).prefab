@@ -223,7 +223,7 @@ MonoBehaviour:
   bullet: {fileID: 2907114641041199220, guid: beb877312a1b529438fefa99d3e2007b, type: 3}
   bullet0: {fileID: 6271957268024542695, guid: ae71c1510aea4b945a98ce104198b4be, type: 3}
   gun: {fileID: 7539865300883717763}
-  gameSession: {fileID: 0}
+  gameSession: {fileID: 1003516084532897825, guid: 2720a46351fdc794cb6345245bc82479, type: 3}
   gameOver: {fileID: 7786464855630495269, guid: 31b728cbe16e04346928b65cc3e0c490, type: 3}
   isAlive: 1
   cooldown0: 1

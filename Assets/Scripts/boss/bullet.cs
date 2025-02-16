@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Wall"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             gameObject.SetActive(false);
         }
