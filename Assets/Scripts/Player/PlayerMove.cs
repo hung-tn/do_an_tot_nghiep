@@ -67,21 +67,21 @@ public class PlayerMove : MonoBehaviour
 
     void Run()
     {
-        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
-        myRigidbody.velocity = playerVelocity;
+        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.linearVelocity.y);
+        myRigidbody.linearVelocity = playerVelocity;
 
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.linearVelocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
     }
 
 
     void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.linearVelocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
         {
 
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.linearVelocity.x), 1f);
         }
     }
     void Climbing()
@@ -92,11 +92,11 @@ public class PlayerMove : MonoBehaviour
             myAnimator.SetBool("isClimbing", false);
             return;
         }
-        Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, moveInput.y * climbSpeed);
-        myRigidbody.velocity = climbVelocity;
+        Vector2 climbVelocity = new Vector2(myRigidbody.linearVelocity.x, moveInput.y * climbSpeed);
+        myRigidbody.linearVelocity = climbVelocity;
 
         myRigidbody.gravityScale = 0f;
-        bool playerClimbSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
+        bool playerClimbSpeed = Mathf.Abs(myRigidbody.linearVelocity.y) > Mathf.Epsilon;
         myAnimator.SetBool("isClimbing", playerClimbSpeed);
     }
 
@@ -151,7 +151,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (value.isPressed)
         {
-            myRigidbody.velocity += new Vector2(0f, jumpSpeed);
+            myRigidbody.linearVelocity += new Vector2(0f, jumpSpeed);
             myAnimator.SetBool("isJump", true);
         }
     }
@@ -172,7 +172,7 @@ public class PlayerMove : MonoBehaviour
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
-                myRigidbody.velocity = deathKick;
+                myRigidbody.linearVelocity = deathKick;
                 gameOver.OnPlayerDeath();
             }
         }
@@ -192,7 +192,7 @@ public class PlayerMove : MonoBehaviour
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
-                myRigidbody.velocity = deathKick;
+                myRigidbody.linearVelocity = deathKick;
                 gameOver.OnPlayerDeath();
             }
         }
