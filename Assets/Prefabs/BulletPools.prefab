@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3632634969564690930}
   m_Layer: 12
   m_Name: BulletPools
-  m_TagString: Untagged
+  m_TagString: Bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -101,6 +104,7 @@ MonoBehaviour:
   bulletSAmount: 10
   startAngle: 90
   endAngle: 270
+  fireRate: 2
 --- !u!1 &3237496949691014521
 GameObject:
   m_ObjectHideFlags: 0

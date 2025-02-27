@@ -131,7 +131,6 @@ public class GameSession : MonoBehaviour
     public void ConsumeMana()
     {
         currentMana -= manaCost;
-        currentMana -= manaCost;
         manaBarText.text = "MP " + currentMana + " / " + maxMana;
         manaBarSlider.value = currentMana;
     }

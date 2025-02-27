@@ -172,8 +172,8 @@ public class PlayerMove : MonoBehaviour
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
-                myRigidbody.linearVelocity = deathKick;
-                gameOver.OnPlayerDeath();
+                //myRigidbody.linearVelocity = deathKick;
+                gameOver.Gameover();
             }
         }
     }
@@ -192,8 +192,8 @@ public class PlayerMove : MonoBehaviour
             {
                 isAlive = false;
                 myAnimator.SetTrigger("Death");
-                myRigidbody.linearVelocity = deathKick;
-                gameOver.OnPlayerDeath();
+                //myRigidbody.linearVelocity = deathKick;
+                gameOver.Gameover();
             }
         }
 
@@ -204,7 +204,6 @@ public class PlayerMove : MonoBehaviour
         if (gameSession.hpItem > 0 && gameSession.currentHealth < gameSession.maxHealth)
         {
             gameSession.hpItem--;
-            gameSession.currentHealth += 50;
             gameSession.currentHealth += 50;
             if (gameSession.currentHealth > gameSession.maxHealth)
             {
@@ -222,7 +221,6 @@ public class PlayerMove : MonoBehaviour
         {
             gameSession.currentMana += 50;
             gameSession.mpItem--;
-            gameSession.currentMana += 50;
             if (gameSession.currentMana > gameSession.maxMana) gameSession.currentMana = gameSession.maxMana;
             gameSession.mpText.text = "MP: " + gameSession.mpItem;
             gameSession.manaBarText.text = "MP " + gameSession.currentMana + " / " + gameSession.maxMana;

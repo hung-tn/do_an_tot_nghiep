@@ -15,8 +15,8 @@ public class GameOver : MonoBehaviour
     }
     public void Gameover()
     {
-        gameOver.SetActive(true);
         Time.timeScale = 0;
+        gameOver.SetActive(true);
     }
     public void Restart()
     {
