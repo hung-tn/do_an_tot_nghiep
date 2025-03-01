@@ -203,15 +203,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (gameSession.hpItem > 0 && gameSession.currentHealth < gameSession.maxHealth)
         {
-            gameSession.hpItem--;
             gameSession.currentHealth += 50;
+            gameSession.hpItem--;
             if (gameSession.currentHealth > gameSession.maxHealth)
-            {
                 gameSession.currentHealth = gameSession.maxHealth;
                 gameSession.hpText.text = "HP: " + gameSession.hpItem;
                 gameSession.healthBarText.text = "HP " + gameSession.currentHealth + " / " + gameSession.maxHealth;
                 gameSession.healthBarSlider.value = gameSession.currentHealth;
-            }
+            
         }
     }
 
@@ -221,7 +220,8 @@ public class PlayerMove : MonoBehaviour
         {
             gameSession.currentMana += 50;
             gameSession.mpItem--;
-            if (gameSession.currentMana > gameSession.maxMana) gameSession.currentMana = gameSession.maxMana;
+            if (gameSession.currentMana > gameSession.maxMana) 
+            gameSession.currentMana = gameSession.maxMana;
             gameSession.mpText.text = "MP: " + gameSession.mpItem;
             gameSession.manaBarText.text = "MP " + gameSession.currentMana + " / " + gameSession.maxMana;
             gameSession.manaBarSlider.value = gameSession.currentMana;
