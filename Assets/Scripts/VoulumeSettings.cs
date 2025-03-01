@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
 using UnityEngine.UI;
-using UnityEditorInternal;
 
 public class VoulumeSettings : MonoBehaviour
 {
